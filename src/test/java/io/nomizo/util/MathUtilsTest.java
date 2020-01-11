@@ -10,6 +10,8 @@ import static org.junit.jupiter.api.Assumptions.*;
 class MathUtilsTest {
     // Member Variable - Declared
     MathUtils mathUtils;
+    TestInfo testInfo;
+    TestReporter testReporter;
 
     @BeforeAll
     void beforeAllInit() {
@@ -17,9 +19,12 @@ class MathUtilsTest {
     }
 
     @BeforeEach
-    void init() {
+    void init(TestInfo testInfo, TestReporter testReporter) {
+        this.testInfo = testInfo;
+        this.testReporter = testReporter;
         // Member Variable - Initialized
         mathUtils = new MathUtils();
+        testReporter.publishEntry("Running " + testInfo.getDisplayName() + " with tags " + testInfo.getTags());
     }
 
     @AfterEach
@@ -32,16 +37,16 @@ class MathUtilsTest {
     @Tag("Math")
     class AddTest {
         @Test
-        @DisplayName("When adding two positive numbers")
+        @DisplayName("1st Adding Method")
         void testAddPositive() {
             int expected = 2;
-            int actual = mathUtils.add(1, 4);
+            int actual = mathUtils.add(1, 1);
             // Lambda expression makes JUnit only execute the string when the test fails.
             assertEquals(expected, actual, () -> "should return " + expected + " but returned " + actual + " ");
         }
 
         @Test
-        @DisplayName("When adding two negative numbers")
+        @DisplayName("2nd Adding Method")
         void testAddNegative() {
             assertEquals(-2, mathUtils.add(-1, -1), "should return the right sum");
         }
@@ -50,6 +55,7 @@ class MathUtilsTest {
         @Test
         @DisplayName("Testing Add Method")
         void testAdd() {
+            System.out.println("Running " + testInfo.getDisplayName() + " with tags " + testInfo.getTags());
             int expected = 2;
             int actual = mathUtils.add(1, 1);
             assertEquals(expected, actual, "The add method should add two numbers");
@@ -104,7 +110,7 @@ class MathUtilsTest {
         @RepeatedTest(3)
         void testSquared(RepetitionInfo repetitionInfo) {
             double expected = 3125;
-            double actual = mathUtils.squared(5, 6);
+            double actual = mathUtils.squared(5, 5);
             assertEquals(expected, actual, () -> "Should return " + expected + "but returned " + actual + "");
         }
 
