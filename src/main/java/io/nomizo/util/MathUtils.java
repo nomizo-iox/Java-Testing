@@ -21,6 +21,11 @@ public class MathUtils {
         return c;
     }
 
+    public double squared(double a, double b) {
+        double c = Math.pow(a, b);
+        return c;
+    }
+
 
     public double computeCircleArea(double radius) {
        double area = Math.PI * radius * radius;

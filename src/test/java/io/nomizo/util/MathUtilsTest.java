@@ -6,6 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assumptions.*;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@DisplayName("When Running MathUtils ")
 class MathUtilsTest {
     // Member Variable - Declared
     MathUtils mathUtils;
@@ -27,69 +28,84 @@ class MathUtilsTest {
     }
 
     @Nested
-    @DisplayName("Add Class")
+    @DisplayName("Add Methods")
+    @Tag("Math")
     class AddTest {
         @Test
         @DisplayName("When adding two positive numbers")
         void testAddPositive() {
-            assertEquals(2, mathUtils.add(1, 1), "should return the right sum");
+            int expected = 2;
+            int actual = mathUtils.add(1, 4);
+            // Lambda expression makes JUnit only execute the string when the test fails.
+            assertEquals(expected, actual, () -> "should return " + expected + " but returned " + actual + " ");
         }
 
         @Test
-        @DisplayName("When adding two positive numbers")
+        @DisplayName("When adding two negative numbers")
         void testAddNegative() {
-            assertEquals(-1, mathUtils.add(-1, -1), "should return the right sum");
+            assertEquals(-2, mathUtils.add(-1, -1), "should return the right sum");
         }
     }
 
-    @Test
-    @DisplayName("Testing Add Method")
-    void testAdd(){
-        int expected = 2;
-        int actual = mathUtils.add(1, 1);
-        assertEquals(expected, actual, "The add method should add two numbers");
-    }
+        @Test
+        @DisplayName("Testing Add Method")
+        void testAdd() {
+            int expected = 2;
+            int actual = mathUtils.add(1, 1);
+            assertEquals(expected, actual, "The add method should add two numbers");
+        }
 
-    @Test
-    void testSubtraction() {
-        assertAll(
-                () -> assertEquals(35, 2, mathUtils.substract(10, 12), "This subtract method should subtract two numbers"),
-                () -> assertEquals(121, -35, mathUtils.substract(39, 10), "This subtract method should subtract two numbers"),
-                () -> assertEquals(23, -35, mathUtils.substract(19, 198), "This subtract method should subtract two numbers")
-        );
-    }
-    @Test
-    @DisplayName("Testing Multiply Method")
-    void testMultiply() {
-        int expected = 21;
-        int actual = mathUtils.multiply(3, 7);
-        boolean isServerUp = false;
-        assumeTrue(isServerUp);
-        assertEquals(expected, actual, "This multiply method should multiply two numbers");
-    }
+        @Test
+        void testSubtraction() {
+            assertAll(
+                    () -> assertEquals(35, 2, mathUtils.substract(10, 12), "This subtract method should subtract two numbers"),
+                    () -> assertEquals(121, -35, mathUtils.substract(39, 10), "This subtract method should subtract two numbers"),
+                    () -> assertEquals(23, -35, mathUtils.substract(19, 198), "This subtract method should subtract two numbers")
+            );
+        }
 
-    @Test
-    @DisplayName("Testing Divide Method")
-    void  testDivide() {
-        assertThrows(ArithmeticException.class, () -> mathUtils.divide(1, 0), "divide by zero should through");
-    }
+        @Test
+        @DisplayName("Testing Multiply Method")
+        @Tag("Math")
+        void testMultiply() {
+            int expected = 21;
+            int actual = mathUtils.multiply(3, 7);
+            boolean isServerUp = false;
+            assumeTrue(isServerUp);
+            assertEquals(expected, actual, "This multiply method should multiply two numbers");
+        }
 
-    @Test
-    @DisplayName("Testing Radius Method")
-    void testComputeCircleRadius() {
-        assertEquals(314.1592653589793, mathUtils.computeCircleArea(10), "Should return right circle area");
-    }
+        @Test
+        @DisplayName("Testing Divide Method")
+        @Tag("Math")
+        void testDivide() {
+            assertThrows(ArithmeticException.class, () -> mathUtils.divide(1, 0), "divide by zero should through");
+        }
 
+        @Test
+        @Tag("Circle")
+        @DisplayName("Testing Radius Method")
+        void testComputeCircleRadius() {
+            assertEquals(314.1592653589793, mathUtils.computeCircleArea(10), "Should return right circle area");
+        }
 
-    @Test
+        @Test
 //    @Disabled
-    @DisplayName("Testing Fail Method")
-    void testFail(){
-        System.out.println("This test will show up it if fails");
-      fail("This test should fail");
-    }
+        @DisplayName("Testing Fail Method")
+        @Tag("Fail")
+        void testFail() {
+            System.out.println("This test will show up it if fails");
+            fail("This test should fail");
+        }
 
-
-
+        @Test
+        @DisplayName("Testing Square Method")
+        @Tag("Math")
+        @RepeatedTest(3)
+        void testSquared(RepetitionInfo repetitionInfo) {
+            double expected = 3125;
+            double actual = mathUtils.squared(5, 6);
+            assertEquals(expected, actual, () -> "Should return " + expected + "but returned " + actual + "");
+        }
 
 }

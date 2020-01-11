@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="4cb2ab1c-e366-4538-a8e6-7a34d44ac66a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/nomizo/util/MathUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/nomizo/util/MathUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/io/nomizo/util/MathUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/nomizo/util/MathUtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/nomizo/util/MathUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/nomizo/util/MathUtils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/io/nomizo/util/MathUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/io/nomizo/util/MathUtilsTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +80,34 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MathUtilsTest$AddTest.testAddNegative">
+  <component name="RunManager" selected="JUnit.MathTest">
+    <configuration name="MathTest" type="JUnit" factoryName="JUnit">
+      <module name="JUnit5Basics" />
+      <option name="PACKAGE_NAME" value="io.nomizo.util" />
+      <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest$AddTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="tags" />
+      <option name="PARAMETERS" value="" />
+      <tag value="Math" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MathUtilsTest$AddTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JUnit5Basics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.nomizo.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.nomizo.util" />
+      <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest$AddTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MathUtilsTest$AddTest.testAddNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JUnit5Basics" />
       <extension name="coverage">
@@ -90,6 +119,22 @@
       <option name="PACKAGE_NAME" value="io.nomizo.util" />
       <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest$AddTest" />
       <option name="METHOD_NAME" value="testAddNegative" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MathUtilsTest$AddTest.testAddPositive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JUnit5Basics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.nomizo.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.nomizo.util" />
+      <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest$AddTest" />
+      <option name="METHOD_NAME" value="testAddPositive" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -110,38 +155,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MathUtilsTest.testAdd" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JUnit5Basics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.nomizo.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.nomizo.util" />
-      <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest" />
-      <option name="METHOD_NAME" value="testAdd" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MathUtilsTest.testComputeCircleRadius" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="JUnit5Basics" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.nomizo.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="io.nomizo.util" />
-      <option name="MAIN_CLASS_NAME" value="io.nomizo.util.MathUtilsTest" />
-      <option name="METHOD_NAME" value="testComputeCircleRadius" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MathUtilsTest.testDivide" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JUnit5Basics" />
       <extension name="coverage">
@@ -158,13 +171,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.MathTest" />
+      <item itemvalue="JUnit.MathUtilsTest" />
+      <item itemvalue="JUnit.MathUtilsTest$AddTest" />
+      <item itemvalue="JUnit.MathUtilsTest$AddTest.testAddNegative" />
+      <item itemvalue="JUnit.MathUtilsTest$AddTest.testAddPositive" />
+      <item itemvalue="JUnit.MathUtilsTest.testDivide" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MathUtilsTest$AddTest.testAddNegative" />
         <item itemvalue="JUnit.MathUtilsTest" />
+        <item itemvalue="JUnit.MathUtilsTest$AddTest" />
+        <item itemvalue="JUnit.MathUtilsTest$AddTest.testAddPositive" />
+        <item itemvalue="JUnit.MathUtilsTest$AddTest.testAddNegative" />
         <item itemvalue="JUnit.MathUtilsTest.testDivide" />
-        <item itemvalue="JUnit.MathUtilsTest.testComputeCircleRadius" />
-        <item itemvalue="JUnit.MathUtilsTest.testAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +211,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1578699800018</updated>
-      <workItem from="1578699804485" duration="12533000" />
+      <workItem from="1578699804485" duration="16887000" />
     </task>
     <servers />
   </component>
@@ -198,6 +219,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="149" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578764344899">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="149" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877@0.23.1440.877" timestamp="1578764344899" />
     <state x="123" y="131" width="1197" height="652" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1578703282718">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -206,42 +231,42 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="459" y="240" key="#com.intellij.ide.util.PackageChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1578701774468" />
-    <state x="459" y="248" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578701721808">
+    <state x="459" y="248" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578764126348">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="459" y="248" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1578701721808" />
-    <state width="1398" height="251" key="GridCell.Tab.0.bottom" timestamp="1578759373315">
+    <state x="459" y="248" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.877@0.23.1440.877" timestamp="1578764126348" />
+    <state width="1398" height="251" key="GridCell.Tab.0.bottom" timestamp="1578764349211">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="251" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1578759373315" />
-    <state width="1398" height="251" key="GridCell.Tab.0.center" timestamp="1578759373312">
+    <state width="1398" height="251" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1578764349211" />
+    <state width="1398" height="251" key="GridCell.Tab.0.center" timestamp="1578764349210">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="251" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1578759373312" />
-    <state width="1398" height="251" key="GridCell.Tab.0.left" timestamp="1578759373302">
+    <state width="1398" height="251" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1578764349210" />
+    <state width="1398" height="251" key="GridCell.Tab.0.left" timestamp="1578764349209">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="251" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1578759373302" />
-    <state width="1398" height="251" key="GridCell.Tab.0.right" timestamp="1578759373313">
+    <state width="1398" height="251" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1578764349209" />
+    <state width="1398" height="251" key="GridCell.Tab.0.right" timestamp="1578764349211">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="251" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1578759373313" />
-    <state width="1398" height="255" key="GridCell.Tab.1.bottom" timestamp="1578758438140">
+    <state width="1398" height="251" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1578764349211" />
+    <state width="1398" height="255" key="GridCell.Tab.1.bottom" timestamp="1578763866381">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1578758438140" />
-    <state width="1398" height="255" key="GridCell.Tab.1.center" timestamp="1578758438139">
+    <state width="1398" height="255" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1578763866381" />
+    <state width="1398" height="255" key="GridCell.Tab.1.center" timestamp="1578763866380">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1578758438139" />
-    <state width="1398" height="255" key="GridCell.Tab.1.left" timestamp="1578758438139">
+    <state width="1398" height="255" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1578763866380" />
+    <state width="1398" height="255" key="GridCell.Tab.1.left" timestamp="1578763866380">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1578758438139" />
-    <state width="1398" height="255" key="GridCell.Tab.1.right" timestamp="1578758438139">
+    <state width="1398" height="255" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1578763866380" />
+    <state width="1398" height="255" key="GridCell.Tab.1.right" timestamp="1578763866381">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="1398" height="255" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1578758438139" />
+    <state width="1398" height="255" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1578763866380" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1578756440936">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
